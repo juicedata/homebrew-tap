@@ -2,16 +2,16 @@
 class Juicesync < Formula
   desc "A tool to move your data between any clouds or regions."
   homepage "https://juicefs.com/"
-  version "0.2.0"
+  version "0.3.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/juicedata/juicesync/releases/download/v0.2.0/juicesync_0.2.0_Darwin_x86_64.tar.gz"
-    sha256 "f9f1d586a316caa9bfb5224d75e4a5a2091e7a676e83a9532f3aa7991a82a836"
+    url "https://github.com/juicedata/juicesync/releases/download/v0.3.1/juicesync_0.3.1_Darwin_x86_64.tar.gz"
+    sha256 "22304164bf98160c22bded405c0536e95f85bdce55a154383bbe13bbb7a21cb5"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.2.0/juicesync_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "4a148beb757f1c59ee3780d552f13d9d5807d8325ca2b38bf91e083d92df9b70"
+      url "https://github.com/juicedata/juicesync/releases/download/v0.3.1/juicesync_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "e0179864455c6d6b1d5a8d31d566160b3ab50293b099c84e6c6c7f470b1b9855"
     end
   end
 
