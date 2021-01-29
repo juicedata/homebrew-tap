@@ -10,15 +10,15 @@ class Juicefs < Formula
 
   if OS.mac?
     url "https://github.com/juicedata/juicefs/releases/download/v0.10.0/juicefs_0.10.0_darwin_amd64.tar.gz"
-    sha256 "6b5492c5bd0969e46bcc37653a1aac2105a14cf441a5f48c61f2c13f0884105e"
+    sha256 "2fc1fef8331d14717da27cf448a6830a9b9977b0c6d0eb44dc9b3a02b51d51ef"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/juicedata/juicefs/releases/download/v0.10.0/juicefs_0.10.0_linux_amd64.tar.gz"
-    sha256 "9b46482ac2fbe8f560e08b2a39df07c48c14e6bde697fafee0d343aed440e2e7"
+    sha256 "1fefef0fc4af8351e1278f99c95fe371231f9ee46245e27852df0cbb90a8b530"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
     url "https://github.com/juicedata/juicefs/releases/download/v0.10.0/juicefs_0.10.0_linux_arm64.tar.gz"
-    sha256 "bb77a8bd34501529e0bfd736ca1b42ff926771db6e26e207b7c7906f3b3c4934"
+    sha256 "d2492ae2fbdb05d8f46d9635ece5a334e1f5c947cfd118c45be2fa21da59281a"
   end
 
   def install
