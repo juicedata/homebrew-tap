@@ -5,20 +5,20 @@
 class Juicefs < Formula
   desc "JuiceFS is a distributed POSIX file system built on top of Redis and S3"
   homepage "https://github.com/juicedata/juicefs"
-  version "0.14-dev"
+  version "0.13.1"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/juicedata/juicefs/releases/download/v0.14-dev/juicefs-0.14-dev-darwin-amd64.tar.gz"
-    sha256 "0e970ab377057998fea1c2b9aef3940f2b83dae0c5a8371bac0c3eaf0c7c4254"
+    url "https://github.com/juicedata/juicefs/releases/download/v0.13.1/juicefs-0.13.1-darwin-amd64.tar.gz"
+    sha256 "7b762aaf679882f647ab4bbd21f721b270e167df3f7a3b1894b63298c23ffc3e"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/juicedata/juicefs/releases/download/v0.14-dev/juicefs-0.14-dev-linux-amd64.tar.gz"
-    sha256 "9348ee76a87d5c97fb20203c47896f0cd18b4faae42095dd9b05de054cfd9a22"
+    url "https://github.com/juicedata/juicefs/releases/download/v0.13.1/juicefs-0.13.1-linux-amd64.tar.gz"
+    sha256 "5f9eb2ac75920635983ec86061a7945845126b811369fc48a1ddd1254b83bd56"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/juicedata/juicefs/releases/download/v0.14-dev/juicefs-0.14-dev-linux-arm64.tar.gz"
-    sha256 "b8a6b8f7a5021c4719186b63363e6a2ac9084f65ec1aa5ba0ae85d0303a0b3a0"
+    url "https://github.com/juicedata/juicefs/releases/download/v0.13.1/juicefs-0.13.1-linux-arm64.tar.gz"
+    sha256 "52e4710cca94b4420fc08d3762d7c7c402a7da0c575f56a62c29b9530ae5cc0a"
   end
 
   def install
