@@ -8,7 +8,7 @@ class Juicesync < Formula
   version "0.7.0"
   bottle :unneeded
 
-  if OS.mac? && Hardware::CPU.intel?
+  if OS.mac?
     url "https://github.com/juicedata/juicesync/releases/download/v0.7.0/juicesync_0.7.0_Darwin_x86_64.tar.gz"
     sha256 "01c516c978779e4d94f676731948c782022fa64263abd1945a71032f500b4bee"
   end
