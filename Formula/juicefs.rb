@@ -5,20 +5,25 @@
 class Juicefs < Formula
   desc "JuiceFS is a distributed POSIX file system built on top of Redis and S3"
   homepage "https://github.com/juicedata/juicefs"
-  version "0.17.5"
+  version "1.0-beta1"
   bottle :unneeded
 
-  if OS.mac?
-    url "https://github.com/juicedata/juicefs/releases/download/v0.17.5/juicefs-0.17.5-darwin-amd64.tar.gz"
-    sha256 "f744e550eeff154e14e826781fc3ab56b189d2a376dd7c3df8feb6a9a888bf6f"
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0-beta1/juicefs-1.0-beta1-darwin-amd64.tar.gz"
+      sha256 "4b92de1883ba3fd429b8c5c71ba127a1ec0bb32791084ec0c3c47ba99cbfbbc6"
+    end
   end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/juicedata/juicefs/releases/download/v0.17.5/juicefs-0.17.5-linux-amd64.tar.gz"
-    sha256 "42f4ffb0cda6fc7937676d761217edfb383221982c89fb1c055afc88bd9ffe6d"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/juicedata/juicefs/releases/download/v0.17.5/juicefs-0.17.5-linux-arm64.tar.gz"
-    sha256 "b2b20ece21561e223c2750210ae95613de594643a1b84da522debc7f9256c924"
+
+  on_linux do
+    if Hardware::CPU.intel?
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0-beta1/juicefs-1.0-beta1-linux-amd64.tar.gz"
+      sha256 "733095714d7efb749cda907e0d778cfb2ce73b4bff1e70dcc697ea89dfcc07b8"
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0-beta1/juicefs-1.0-beta1-linux-arm64.tar.gz"
+      sha256 "53004430c01621c5b7d5104dbe73a73f509f6d2e74852964c3c14085f5a0f5e3"
+    end
   end
 
   def install
