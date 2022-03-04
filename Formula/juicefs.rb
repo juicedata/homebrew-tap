@@ -5,24 +5,24 @@
 class Juicefs < Formula
   desc "JuiceFS is a distributed POSIX file system built on top of Redis and S3"
   homepage "https://github.com/juicedata/juicefs"
-  version "1.0.0-beta1"
+  version "1.0.0-beta2"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0-beta1/juicefs-1.0.0-beta1-darwin-amd64.tar.gz"
-      sha256 "216c999b58bb7b10f3e7d3f7662a14a925b06ad04dd1b16b3d7599731d8c1489"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0-beta2/juicefs-1.0.0-beta2-darwin-amd64.tar.gz"
+      sha256 "a3e5f9aebf7c106a664d6b62d94e0a7cd3663a0a9be04673163fb190d5354476"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0-beta1/juicefs-1.0.0-beta1-linux-amd64.tar.gz"
-      sha256 "f35284f36d167edf3fcc3f634fa9f2321b4f8d3e7fffd07ad4880f3455e77c65"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0-beta2/juicefs-1.0.0-beta2-linux-amd64.tar.gz"
+      sha256 "c34f817e237f97f474070f149e71cfd26c8f203d46d498f6838b237ef05e1fdc"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0-beta1/juicefs-1.0.0-beta1-linux-arm64.tar.gz"
-      sha256 "bcd191a962ff388bc43632119c82f610721e290b7e18171b68093c64e644d3da"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0-beta2/juicefs-1.0.0-beta2-linux-arm64.tar.gz"
+      sha256 "0ba64ea192cbe962c1255ec3966a1105cf13ff393dbb0d12312cf546ba8d2fb0"
     end
   end
 
