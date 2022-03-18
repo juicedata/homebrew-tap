@@ -6,7 +6,6 @@ class Juicefs < Formula
   desc "JuiceFS is a distributed POSIX file system built on top of Redis and S3"
   homepage "https://github.com/juicedata/juicefs"
   version "1.0.0-beta2"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
