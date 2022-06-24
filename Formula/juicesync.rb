@@ -5,20 +5,20 @@
 class Juicesync < Formula
   desc "A tool to move your data between any clouds or regions."
   homepage "https://juicefs.com/"
-  version "0.8.1"
+  version "0.8.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.1/juicesync_0.8.1_Darwin_arm64.tar.gz"
-      sha256 "2b679b7e2fe914043307e34cfa957de4d6f094653075b6c100e9978e24226fcd"
+      url "https://github.com/juicedata/juicesync/releases/download/v0.8.3/juicesync_0.8.3_Darwin_arm64.tar.gz"
+      sha256 "a0bb6f463ad086dbccb52dccd225c32951fedf63a3005533e2e53ef5cadaa6e1"
 
       def install
         bin.install "juicesync"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.1/juicesync_0.8.1_Darwin_x86_64.tar.gz"
-      sha256 "933bb8907db475e8e7d8c250d3e7da56b8009c1c5d6450de66a53478ee8d880e"
+      url "https://github.com/juicedata/juicesync/releases/download/v0.8.3/juicesync_0.8.3_Darwin_x86_64.tar.gz"
+      sha256 "1caed53601eb3894f0f2e3135342b0ffc42e7b86d7b9e65576de0e2591e6d279"
 
       def install
         bin.install "juicesync"
@@ -28,16 +28,16 @@ class Juicesync < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.1/juicesync_0.8.1_Linux_arm64.tar.gz"
-      sha256 "95eccf4f2aaa7c0b3e51d5545607dc88a31fa9f484b3820727f2480fde7fa07d"
+      url "https://github.com/juicedata/juicesync/releases/download/v0.8.3/juicesync_0.8.3_Linux_arm64.tar.gz"
+      sha256 "c1dd5637ba9941331822d28a15b4818bd45720108147d5c9cae0b0c9f7c99bfd"
 
       def install
         bin.install "juicesync"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.1/juicesync_0.8.1_Linux_x86_64.tar.gz"
-      sha256 "c437c454cd7a172e092ee8595a4be7200b7da4c46aab07f8d8376de5da287590"
+      url "https://github.com/juicedata/juicesync/releases/download/v0.8.3/juicesync_0.8.3_Linux_x86_64.tar.gz"
+      sha256 "6283d2e687367043e015b52573100123022c243c70515afafddb70e0ad7f70cb"
 
       def install
         bin.install "juicesync"
