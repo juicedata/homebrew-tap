@@ -5,20 +5,20 @@
 class Juicesync < Formula
   desc "A tool to move your data between any clouds or regions."
   homepage "https://juicefs.com/"
-  version "0.8.4"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.4/juicesync_0.8.4_Darwin_arm64.tar.gz"
-      sha256 "b754fc00dd7833ed93a663d17905ffb4e522de86594660d25aed160dcce0051e"
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0/juicesync_1.0.0_Darwin_arm64.tar.gz"
+      sha256 "558478bf1e132ddcab0508bf685a1be6c0085aa549a2ab879bf3093a41290877"
 
       def install
         bin.install "juicesync"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.4/juicesync_0.8.4_Darwin_x86_64.tar.gz"
-      sha256 "3653cb5173ee9635b599f39fdd264a1bf674c9c2d159e6b3cd6e90419450b6b8"
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0/juicesync_1.0.0_Darwin_x86_64.tar.gz"
+      sha256 "bc821765d13f82bbe1ebdaa815f1388219b59c52bbcccd7755db376dea35f8b9"
 
       def install
         bin.install "juicesync"
@@ -27,17 +27,17 @@ class Juicesync < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.4/juicesync_0.8.4_Linux_x86_64.tar.gz"
-      sha256 "025deb0fd82d09f620388643f193908806f38305fbb7a9e13fbb68115db72fe2"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0/juicesync_1.0.0_Linux_arm64.tar.gz"
+      sha256 "2a5e0665ee8457b02e91b12a98ab3b6ca7dc46897467b27e85d8c73be83f784f"
 
       def install
         bin.install "juicesync"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juicedata/juicesync/releases/download/v0.8.4/juicesync_0.8.4_Linux_arm64.tar.gz"
-      sha256 "6272f6157f2f53367e6466d79f9259ea24a448619e3e294f0adb89e9ce48f049"
+    if Hardware::CPU.intel?
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0/juicesync_1.0.0_Linux_x86_64.tar.gz"
+      sha256 "0be648f9e63ebe0b14a5d4763006344dba22e08f1a4285d92e50b7e362c97727"
 
       def install
         bin.install "juicesync"
