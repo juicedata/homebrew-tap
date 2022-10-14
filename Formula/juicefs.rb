@@ -5,19 +5,19 @@
 class Juicefs < Formula
   desc "JuiceFS is a distributed POSIX file system built on top of Redis and S3"
   homepage "https://github.com/juicedata/juicefs"
-  version "1.0.0"
+  version "1.0.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0/juicefs-1.0.0-darwin-amd64.tar.gz"
-      sha256 "d228dd85f91e06c0be9e990c96803926f48ee275de6acbc21d52a1ade11d18a6"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0.2/juicefs-1.0.2-darwin-amd64.tar.gz"
+      sha256 "a4be802d6e898e5098639f0cf0ec798700c2430c3463160f5b1abdb4f14b84fb"
 
       def install
         bin.install "juicefs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0/juicefs-1.0.0-darwin-arm64.tar.gz"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0.2/juicefs-1.0.2-darwin-arm64.tar.gz"
       sha256 "4fbf1d847d837b231f3ec16f6f6554c3abe059dd0d666c34da8fb1939a6c3c19"
 
       def install
@@ -28,16 +28,16 @@ class Juicefs < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0/juicefs-1.0.0-linux-arm64.tar.gz"
-      sha256 "df2389bd50c40d0e9de823cf2be5a90fd5263d3052d5895a7c950645587f83cc"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0.2/juicefs-1.0.2-linux-arm64.tar.gz"
+      sha256 "c94fbb89475c365aa53398d7679f0392d8de85939571474331fc04eef277e666"
 
       def install
         bin.install "juicefs"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.0/juicefs-1.0.0-linux-amd64.tar.gz"
-      sha256 "142db9ee771caef62dd5b3299e64e6d60effd314df744fec1809f52e2199f81d"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.0.2/juicefs-1.0.2-linux-amd64.tar.gz"
+      sha256 "bd2eb16352b69fae34f2b4cf1edc5d6dd227e41eb23dd2ad4510051078a7fe58"
 
       def install
         bin.install "juicefs"
