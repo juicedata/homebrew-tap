@@ -18,7 +18,7 @@ class Juicefs < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/juicedata/juicefs/releases/download/v1.0.2/juicefs-1.0.2-darwin-arm64.tar.gz"
-      sha256 "4fbf1d847d837b231f3ec16f6f6554c3abe059dd0d666c34da8fb1939a6c3c19"
+      sha256 "c94fbb89475c365aa53398d7679f0392d8de85939571474331fc04eef277e666"
 
       def install
         bin.install "juicefs"
@@ -29,7 +29,7 @@ class Juicefs < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/juicedata/juicefs/releases/download/v1.0.2/juicefs-1.0.2-linux-arm64.tar.gz"
-      sha256 "c94fbb89475c365aa53398d7679f0392d8de85939571474331fc04eef277e666"
+      sha256 "1c1b9a614967107f890d7a0b20c9af24650026b1f5577ffaff7726894588a2dc"
 
       def install
         bin.install "juicefs"
