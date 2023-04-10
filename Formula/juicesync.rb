@@ -5,20 +5,20 @@
 class Juicesync < Formula
   desc "A tool to move your data between any clouds or regions."
   homepage "https://juicefs.com/"
-  version "1.0.4"
+  version "1.0.0-alpha3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicesync/releases/download/v1.0.4/juicesync_1.0.4_Darwin_x86_64.tar.gz"
-      sha256 "89d627e2ceb799b72a77ce60163bb8ae9cee6a0e7f63051d0ddb2db060dd8cd9"
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0-alpha3/juicesync-1.0.0-alpha3-darwin-amd64.tar.gz"
+      sha256 "55aa1b4deac30bffa6660a70ac7380922514bd52f24306e56332991d31f6a422"
 
       def install
         bin.install "juicesync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/juicedata/juicesync/releases/download/v1.0.4/juicesync_1.0.4_Darwin_arm64.tar.gz"
-      sha256 "d134450b5bb014e771687fb04e263ac27121eabb1a46e0514599c5f9fc8cb3e9"
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0-alpha3/juicesync-1.0.0-alpha3-darwin-arm64.tar.gz"
+      sha256 "814ce66e3233700664b2ae1c541d182e0a04327d6850a103cdaf5c303a2be733"
 
       def install
         bin.install "juicesync"
@@ -27,17 +27,17 @@ class Juicesync < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juicedata/juicesync/releases/download/v1.0.4/juicesync_1.0.4_Linux_arm64.tar.gz"
-      sha256 "0e3424f76a8e685d68fde09a8d131824c0f3e78f9ef8a390e2ff139ed09711c4"
+    if Hardware::CPU.intel?
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0-alpha3/juicesync-1.0.0-alpha3-linux-amd64.tar.gz"
+      sha256 "440df1d3752cdf6a968f36bbb2c9992f4b956e0626c39bcefd50b3cef0162188"
 
       def install
         bin.install "juicesync"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicesync/releases/download/v1.0.4/juicesync_1.0.4_Linux_x86_64.tar.gz"
-      sha256 "ef89017122006fdb16867f53c4c16f0d470efa202ff46691caad51a104c7273d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/juicedata/juicesync/releases/download/v1.0.0-alpha3/juicesync-1.0.0-alpha3-linux-arm64.tar.gz"
+      sha256 "f24700cdad961453614cfd1b6b5483d8627a503738ffb38fc1e2722921d238dc"
 
       def install
         bin.install "juicesync"
