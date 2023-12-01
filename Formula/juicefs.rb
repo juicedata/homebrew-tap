@@ -5,20 +5,20 @@
 class Juicefs < Formula
   desc "JuiceFS is a distributed POSIX file system built on top of Redis and S3"
   homepage "https://github.com/juicedata/juicefs"
-  version "1.0.3"
+  version "1.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.3/juicefs-1.0.3-darwin-amd64.tar.gz"
-      sha256 "a85680c44421ca037b48ccf136ec93be032370b8862ea391177774a15bcadd01"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.1.1/juicefs-1.1.1-darwin-amd64.tar.gz"
+      sha256 "71a6aef145ebf03586cad7de648e8dab08d8c10d4597f8bfc1bd9bf85d21827a"
 
       def install
         bin.install "juicefs"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.3/juicefs-1.0.3-darwin-arm64.tar.gz"
-      sha256 "8a293b8cb232109711d4984a2470697de3738ec26b77993f670f497bd3e76be8"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.1.1/juicefs-1.1.1-darwin-arm64.tar.gz"
+      sha256 "109bf18c3235d68a983d216ef95486462565e3c004af5fefc1158892aca2dfc4"
 
       def install
         bin.install "juicefs"
@@ -28,16 +28,16 @@ class Juicefs < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.3/juicefs-1.0.3-linux-arm64.tar.gz"
-      sha256 "fbe3cf07c252f52ddff71453cf09b200af4346fb600ed143e3d3d38c48702b5d"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.1.1/juicefs-1.1.1-linux-arm64.tar.gz"
+      sha256 "53c7a5655a7df5461fd6c83365d220ef13d59206454719688cb9050b67069cff"
 
       def install
         bin.install "juicefs"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/juicedata/juicefs/releases/download/v1.0.3/juicefs-1.0.3-linux-amd64.tar.gz"
-      sha256 "6664ee1b0f368108fa9e30e7635e2558df601b335596d5baf9f24764c4a90ff8"
+      url "https://github.com/juicedata/juicefs/releases/download/v1.1.1/juicefs-1.1.1-linux-amd64.tar.gz"
+      sha256 "7ef138ae93a390a0aedc54a83ce6c1a864e26c07e4027c96931175af5fc88dc7"
 
       def install
         bin.install "juicefs"
